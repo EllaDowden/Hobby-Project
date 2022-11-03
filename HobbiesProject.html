@@ -74,6 +74,7 @@
   <body>
 
     <div class="content">
+            <p class="date-text">The date today is <span class="date"></span></p>
       <h1>Dungeons & Dragons</h1>
       <h2>D&D is an exciting fantasy role-playing game!</h2>
       <img
@@ -124,5 +125,17 @@ Value="Create a character with dnd Beyond!"
 Class="character-button">
 </a>
       <p class="footer">This page was built by Ella Dowden.</p>
+      
+   
+ <script>
+      let today = new Date().toLocaleDateString("en-us", {
+        weekday: "long",
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      });
+      const date = document.querySelector(".date");
+      date.textContent = today;
+    </script>
   </body>
 </html>
